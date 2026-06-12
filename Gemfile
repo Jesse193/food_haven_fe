@@ -60,7 +60,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'

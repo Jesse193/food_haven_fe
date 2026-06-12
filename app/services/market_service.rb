@@ -1,6 +1,6 @@
 class MarketService
   def conn
-    Faraday.new(url: "#{Figaro.env.Elastic_Beanstalk}")
+    Faraday.new(url: 'http://localhost:9292')
   end
 
   def get_url(url)
@@ -9,7 +9,7 @@ class MarketService
   end
 
   def all_markets(latitude, longitude, radius)
-    get_url("/markets/search?latitude=#{latitude}&longitude=#{longitude}&radius=#{radius}")
+    get_url("/markets?latitude=#{latitude}&longitude=#{longitude}&radius=#{radius}")
   end
 
   def one_market(id)

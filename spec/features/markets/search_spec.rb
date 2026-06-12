@@ -19,7 +19,7 @@ RSpec.describe "Search for markets" do
       latitude = 30.69035
       longitude = -88.045015
       radius = 5
-      stub_request(:get, "#{Figaro.env.Elastic_Beanstalk}/favorites?market_ids%5B%5D=1&market_ids%5B%5D=2").
+      stub_request(:get, "#{api_base_url}/favorites?market_ids%5B%5D=1&market_ids%5B%5D=2").
           with(
             headers: {
             'Accept'=>'*/*',
